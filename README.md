@@ -1,6 +1,6 @@
 ## Description
 
-NestJS backend API for the bookstore client using TypeORM and PostgreSQL that uses 'bookstore' database
+NestJS API for the bookstore client using TypeORM and PostgreSQL that uses 'bookstore' database
 
 ## User functionality
 
