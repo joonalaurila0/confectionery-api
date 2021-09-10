@@ -1,65 +1,132 @@
-## Description
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#endpoints">Endpoints</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
+  </ol>
+</details>
 
-NestJS API for the bookstore client using TypeORM and PostgreSQL that uses 'bookstore' database
 
-## User functionality
+# About The Project
 
-User is created with the functionality coming from UserRepository and signing in happens through /auth endpoint's signIn service function that validates the user and generates a JWT Token with a payload to the user
+Simple Ecommerce API
+
+# Built With
+
+* [NestJS](https://github.com/nestjs/nest)
+* [TypeORM](https://github.com/typeorm/typeorm)
+* [PostgreSQL](https://github.com/postgres/postgres)
+
+# Endpoints
+
+## **/users**
+
+### GET
+  - fetch
+  - fetchById
+  - getRoleByUser
+
+### POST
+- createUser
+- changePassword
+- changeEmail
+
+### PATCH
+- updateUserRole
+
+### DELETE
+- remove
 
 
+## **/product**
 
-## Endpoints
+### GET
+- fetch
+- fetchById
 
-# /users
+### POST
+- create
 
-getUsers
+### PATCH
+- update
 
-getUserById
+### DELETE
+- remove
 
-createUser
+## **/orders**
 
-updateUser
+### GET
+- fetch
+- fetchAll
+- fetchById
+- fetchOrderItems
 
-updateUserRole
+### POST
+- create
+- addPaymentIntent
+- getInvoice
+- addOrderItems
 
-deleteUserById
+### UPDATE
+- update
 
-# /product
+### DELETE
+- removeOrder
 
-getProducts
+## **/cart**
 
-getProductById
+### GET
+- fetchCart
+- fetchCartItems
+- fetchProductPrice
 
-createProduct
+### POST
+- createCart
+- addToCart
+- removeCartItem
+- clearCart
 
-updateProduct
+## **/category**
 
-updateStatus
+### GET
+- fetch
 
-deleteProductById
+### POST
+- create
 
-# /orders
+### PATCH
+- update
 
-getOrders
+### DELETE
+- remove
 
-getOrderById
+## **/promotions**
 
-createOrder
+### GET
+- fetchAll
+- sendStream
 
-deleteOrder
+### POST
+- create
 
-# /checkout
+### PATCH
+- update
 
-// nothing implemented yet
+### DELETE
+- remove
 
-# /cart 
+## **/auth**
 
-getCart
-
-addToCart
-
-removeItem
-
-# /auth
-
-signIn
+### POST
+- signIn
