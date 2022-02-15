@@ -59,6 +59,11 @@ To run the docker deployment:
 sh res/startup.sh
 ```
 
+To run the docker deployment from a script with additional tests:
+```console
+sh res/startup.sh
+```
+
 To clean up the docker deployment:
 ```console
 sh res/clean.sh
