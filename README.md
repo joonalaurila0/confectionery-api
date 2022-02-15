@@ -56,7 +56,7 @@ It is directory for the client, you're meant to place the client there
 
 To run the docker deployment:
 ```console
-sh res/startup.sh
+docker-compose up
 ```
 
 To run the docker deployment from a script with additional tests:
