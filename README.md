@@ -1,6 +1,6 @@
 ### About The Project
 
-API for [Ecommerce client](https://github.com/oscarl0000/chocolatestore)
+API for [Ecommerce client](https://github.com/oscarl0000/confectionary-store)
 
 #### Built With
 
