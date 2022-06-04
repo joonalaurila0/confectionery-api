@@ -1,6 +1,6 @@
 ### About The Project
 
-API for Ecommerce client
+API for [Ecommerce client](https://github.com/oscarl0000/confectionery-store)
 
 #### Built With
 
@@ -55,6 +55,11 @@ It is directory for the client, you're meant to place the client there
 ### Docker deployment
 
 To run the docker deployment:
+```console
+docker-compose up
+```
+
+To run the docker deployment from a script with additional tests:
 ```console
 sh res/startup.sh
 ```
