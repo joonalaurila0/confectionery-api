@@ -75,5 +75,5 @@ The application can be deployed in docker by using `docker-compose up` and desir
 
 #### Prerequisites
 
-Node +v16.5.0
+Node +v16.5.0  
 npm 8.5.5
