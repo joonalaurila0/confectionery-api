@@ -4,7 +4,7 @@ API for [Ecommerce client](https://github.com/oscarl0000/confectionery-store)
 
 #### Built With
 
-* Tested on NodeJS 17.3.0 and npm 8.4.1
+* Tested on node 17.3.0 and npm 8.4.1
 
 * [NestJS](https://github.com/nestjs/nest)
 * [TypeORM](https://github.com/typeorm/typeorm)
@@ -75,5 +75,6 @@ The application can be deployed in docker by using `docker-compose up` and desir
 
 #### Prerequisites
 
+PostgreSQL +14.0 (or Docker)
 Node +v16.5.0  
 npm 8.5.5
