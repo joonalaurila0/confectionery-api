@@ -56,20 +56,20 @@ It is directory for the client, you're meant to place the client there
 
 To run the docker deployment:
 ```console
-docker-compose up
+$ docker-compose up
 ```
 
 To run the docker deployment from a script with additional tests:
 ```console
-sh res/startup.sh
+$ sh res/startup.sh
 ```
 
 To clean up the docker deployment:
 ```console
-sh res/clean.sh
+$ sh res/clean.sh
 ```
 
-The application can be deployed in docker by using `docker-compose up` and desired flags. Dockerfile builds on a NodeJS version 16.14.0 and alpine, it builds both the api and the client and runs the application on production as a start point. Application serving port is set to be 3000 by default. The docker-compose.yml also pulls and sets up an image of postgres 14.1 that runs on port 5432 as is by default in postgres. Database is initialized with the `init.sql` file from `res/` directory. Be sure to modify the docker-compose.yml to your liking, by default it expects you to have an ready built image of the application.
+The application can be deployed in docker by using `$ docker-compose up` and desired flags. Dockerfile builds on a NodeJS version 16.14.0 and alpine, it builds both the api and the client and runs the application on production as a start point. Application serving port is set to be 3000 by default. The docker-compose.yml also pulls and sets up an image of postgres 14.1 that runs on port 5432 as is by default in postgres. Database is initialized with the `init.sql` file from `res/` directory. Be sure to modify the docker-compose.yml to your liking, by default it expects you to have an ready built image of the application.
 
 `res/` directory also has shell scripts for deploying and cleaning up the docker deployment, use this with precaution. `startup.sh` runs `docker-compose up -d` and runs a couple of  tests for the containers.
 
