@@ -77,6 +77,6 @@ The application can be deployed in docker by using `$ docker-compose up` and des
 
 #### Prerequisites
 
-PostgreSQL +14.0 (or Docker)
-Node +v16.5.0
-npm 8.5.5
+PostgreSQL +14.0 (or Docker)  
+Node +v16.5.0  
+npm 8.5.5  
