@@ -2,13 +2,15 @@
 
 API for [Ecommerce client](https://github.com/oscarl0000/confectionery-store)
 
+REST API built with NestJS 8.4.1 and TypeScript 4.7.4 for the confectionary-store client, interfaces with PostgreSQL 14.0 with TypeORM 0.3.7 to serve data to the client. API also has Swagger/OpenAPI to give definitions of the routes. Payment gateway ishandled through Stripe API and client uses jwt's for authentication of the users, this is implemented through Passport libraries. Integration and end-to-end testing is implemented through jest, sinon and supertest.
+
 #### Built With
 
 * Tested on node 17.3.0 and npm 8.4.1
 
-* [NestJS](https://github.com/nestjs/nest)
-* [TypeORM](https://github.com/typeorm/typeorm)
-* [PostgreSQL](https://github.com/postgres/postgres)
+* [NestJS](https://github.com/nestjs/nest) v8.4.7
+* [TypeORM](https://github.com/typeorm/typeorm) 0.3.7
+* [PostgreSQL](https://github.com/postgres/postgres) v14.0
 
 #### Quick Start
 
@@ -75,6 +77,6 @@ The application can be deployed in docker by using `$ docker-compose up` and des
 
 #### Prerequisites
 
-PostgreSQL +14.0 (or Docker)  
-Node +v16.5.0  
+PostgreSQL +14.0 (or Docker)
+Node +v16.5.0
 npm 8.5.5
