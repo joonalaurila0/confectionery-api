@@ -32,6 +32,18 @@ $ node tools.js
 $ npm run start:prod
 ```
 
+### Integration tests
+
+```console
+$ npm run test
+```
+
+### End-to-end tests
+
+```console
+$ npm run test:e2e
+```
+
 #### About running in production and tools.js
 
 If you're on linux, to run this application on production, build the API with `npm run build` and then build the client with `npm run build:client`. If these were succesful, API was built into `dist/` and client was built into `client/dist/`. You can now run the client with `npm run start:prod`, this will serve the client from `client/dist/` from the API.
@@ -44,7 +56,7 @@ Tools.js serves to build the client for linux machines, specifically tested on D
 
 #### Resources
 
-The `res/` directory has the schema for database and also data for testing the application.
+The `res/` directory has the schema for database and also data for testing and running the application.
 
 #### About
 
@@ -78,5 +90,6 @@ The application can be deployed in docker by using `$ docker-compose up` and des
 #### Prerequisites
 
 PostgreSQL +14.0 (or Docker)  
+TypeScript +4.7.4  
 Node +v16.5.0  
-npm 8.5.5  
+npm +8.5.5  
