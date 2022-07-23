@@ -4,6 +4,8 @@ API for [Ecommerce client](https://github.com/oscarl0000/confectionery-store)
 
 REST API built with NestJS 8.4.1 and TypeScript 4.7.4 for the [confectionary-store](https://github.com/oscarl0000/confectionery-store) client, interfaces with PostgreSQL 14.0 with TypeORM 0.3.7 to serve data to the client. API also has Swagger/OpenAPI to give definitions of the routes. Payment gateway is handled through Stripe API and client uses jwt's for authentication of the users, this is implemented through Passport libraries. Integration and end-to-end testing is implemented through jest, sinon and supertest.
 
+* Swagger UI at: `localhost:3000/api`.
+
 #### Built With
 
 * Tested on node 17.3.0 and npm 8.4.1
