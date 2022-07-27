@@ -89,6 +89,31 @@ The application can be deployed in docker by using `$ docker-compose up` and des
 
 `res/` directory also has shell scripts for deploying and cleaning up the docker deployment, use this with precaution. `startup.sh` runs `docker-compose up -d` and runs a couple of  tests for the containers.
 
+### Note on init.sql
+
+**NOTE: This does not go over sequences and views! Those can also be modified with 'reassigned owned' as long as you're using +v8.2**.
+
+To change the ownership from postgres to another user, remember to change table ownerships as well.
+`$ sudo -u postgres psql -d bookstore -c 'ALTER DATABASE bookstore OWNER to <user>;'`
+`$ sudo -u postgres psql -d bookstore -c 'ALTER SCHEMA bookstore OWNER to <user>;'`
+
+```sql
+ALTER TABLE public.cart OWNER to <another_user>;
+ALTER TABLE public."cart-item" OWNER to <another_user>;
+ALTER TABLE public.category OWNER to <another_user>;
+ALTER TABLE public.images OWNER to <another_user>;
+ALTER TABLE public."order-item" OWNER to <another_user>;
+ALTER TABLE public.orders OWNER to <another_user>;
+ALTER TABLE public.product_categories OWNER to <another_user>;
+ALTER TABLE public.products OWNER to <another_user>;
+ALTER TABLE public.promotions OWNER to <another_user>;
+ALTER TABLE public.typeorm_metadata OWNER to <another_user>;
+ALTER TABLE public.users OWNER to <another_user>;
+```
+
+One liner:
+`ALTER TABLE public.cart OWNER to <another_user>; ALTER TABLE public."cart-item" OWNER to <another_user>; ALTER TABLE public.category OWNER to <another_user>; ALTER TABLE public.images OWNER to <another_user>; ALTER TABLE public."order-item" OWNER to <another_user>; ALTER TABLE public.orders OWNER to <another_user>; ALTER TABLE public.product_categories OWNER to <another_user>; ALTER TABLE public.products OWNER to <another_user>; ALTER TABLE public.promotions OWNER to <another_user>; ALTER TABLE public.typeorm_metadata OWNER to <another_user>; ALTER TABLE public.users OWNER to <another_user>;`
+
 #### Prerequisites
 
 PostgreSQL +14.0 (or Docker)  
