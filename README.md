@@ -77,8 +77,10 @@ The application can be deployed in docker by using `$ docker-compose up` and des
 **NOTE: This does not go over sequences and views! Those can also be modified with 'reassigned owned' as long as you're using +v8.2**.
 
 To change the ownership from postgres to another user, remember to change table ownerships as well.
-`$ sudo -u postgres psql -d bookstore -c 'ALTER DATABASE bookstore OWNER to <user>;'`
-`$ sudo -u postgres psql -d bookstore -c 'ALTER SCHEMA bookstore OWNER to <user>;'`
+```bash
+$ sudo -u postgres psql -d bookstore -c 'ALTER DATABASE bookstore OWNER to <user>;'
+$ sudo -u postgres psql -d bookstore -c 'ALTER SCHEMA bookstore OWNER to <user>;'
+```
 
 ```sql
 ALTER TABLE public.cart OWNER to <another_user>;
