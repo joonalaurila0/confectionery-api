@@ -72,7 +72,9 @@ The application can be deployed in docker by using `$ docker-compose up` and des
 
 `res/` directory also has shell scripts for deploying and cleaning up the docker deployment, use this with precaution. `startup.sh` runs `docker-compose up -d` and runs a couple of  tests for the containers.
 
-### Note on init.sql
+### Note on data.sql
+
+In the res/ directory, data.sql contains both insertation.sql and schema.sql contents. This file can be used for deploying the application.
 
 **NOTE: This does not go over sequences and views! Those can also be modified with 'reassigned owned' as long as you're using +v8.2**.
 
