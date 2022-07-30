@@ -100,7 +100,7 @@ ALTER TABLE public.users OWNER to <another_user>;
 
 #### Prerequisites
 
-PostgreSQL +14.0 (or Docker)  
-TypeScript +4.7.4  
-Node +v16.5.0  
-npm +8.5.5  
+PostgreSQL +13.0 (or Docker)    
+TypeScript +4.7.4   
+Node +v12.2.20  
+npm +7.5.5  
