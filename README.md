@@ -2,7 +2,7 @@
 
 API for [Ecommerce client](https://github.com/oscarl0000/confectionery-store)
 
-REST API built with NestJS 8.4.1 and TypeScript 4.7.4 for the [confectionary-store](https://github.com/oscarl0000/confectionery-store) client, interfaces with PostgreSQL 14.0 with TypeORM 0.3.7 to serve data to the client. API also has Swagger/OpenAPI to give definitions of the routes. Payment gateway is handled through Stripe API and client uses jwt's for authentication of the users, this is implemented through Passport libraries. Integration and end-to-end testing is implemented through jest, sinon and supertest.
+REST API built with NestJS 8.4.1 and TypeScript 4.7.4 for the [confectionary-store](https://github.com/oscarl0000/confectionery-store) client, interfaces with PostgreSQL 14.0 with TypeORM 0.3.7 to serve data to the client. API also has Swagger/OpenAPI to give definitions of the routes. Payment gateway is handled through Stripe API and client uses jwt's for authentication of the users, this is implemented through Passport libraries. Integration and end-to-end testing is implemented through jest and supertest.
 
 * Swagger UI at: `localhost:3000/api`.
 
@@ -86,10 +86,10 @@ $ sudo -u postgres psql -d bookstore -c 'ALTER SCHEMA bookstore OWNER to <user>;
 
 ```sql
 ALTER TABLE public.cart OWNER to <another_user>;
-ALTER TABLE public."cart-item" OWNER to <another_user>;
+ALTER TABLE public.cart_item OWNER to <another_user>;
 ALTER TABLE public.category OWNER to <another_user>;
 ALTER TABLE public.images OWNER to <another_user>;
-ALTER TABLE public."order-item" OWNER to <another_user>;
+ALTER TABLE public.order_item OWNER to <another_user>;
 ALTER TABLE public.orders OWNER to <another_user>;
 ALTER TABLE public.product_categories OWNER to <another_user>;
 ALTER TABLE public.products OWNER to <another_user>;
