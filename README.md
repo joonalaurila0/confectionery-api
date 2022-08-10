@@ -8,6 +8,8 @@ REST API built with NestJS 8.4.1 and TypeScript 4.7.4 for the [confectionary-sto
 
 #### Built With
 
+[![Build Status](http://170.187.184.8:8080/job/chocolatestore/badge/icon)](http://170.187.184.8:8080/job/chocolatestore/)
+
 * Tested on node 17.3.0 and npm 8.4.1
 
 * [NestJS](https://github.com/nestjs/nest) v8.4.7
