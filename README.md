@@ -2,9 +2,9 @@
 
 [![Build Status](http://170.187.184.8:8080/buildStatus/icon?job=chocolatestore)](http://170.187.184.8:8080/job/chocolatestore/)
 
-API for [Ecommerce client](https://github.com/oscarl0000/confectionery-store)
+API for [Ecommerce client](https://github.com/joonalaurila0/confectionery-store)
 
-REST API built with NestJS 8.4.1 and TypeScript 4.7.4 for the [confectionary-store](https://github.com/oscarl0000/confectionery-store) client, interfaces with PostgreSQL 14.0 with TypeORM 0.3.7 to serve data to the client. API also has Swagger/OpenAPI to give definitions of the routes. Payment gateway is handled through Stripe API and client uses jwt's for authentication of the users, this is implemented through Passport libraries. Integration and end-to-end testing is implemented through jest and supertest.
+REST API built with NestJS 8.4.1 and TypeScript 4.7.4 for the [confectionary-store](https://github.com/joonalaurila0/confectionery-store) client, interfaces with PostgreSQL 14.0 with TypeORM 0.3.7 to serve data to the client. API also has Swagger/OpenAPI to give definitions of the routes. Payment gateway is handled through Stripe API and client uses jwt's for authentication of the users, this is implemented through Passport libraries. Integration and end-to-end testing is implemented through jest and supertest.
 
 * Swagger UI at: `localhost:3000/api`.
 
@@ -40,9 +40,9 @@ $ npm run test
 $ npm run test:e2e
 ```
 
-#### About running in production and tools.js
+#### Quickstart for deployment with frontend
 
-To deploy this application, install the packages first for the api with `npm run install` and then for the client, `npm --prefix ./client run install` which install packages for the client, pointing to the `client/` directory (client is assumed to be in the directory). To build the api and the client you follow similar steps with `npm run build` to build the api and `npm --prefix ./client run build` to build the client. Run `npm run start:prod` to run the application in production, this serves the client from `client/dist/` and runs the api from `dist/`. Directory includes .env file template with predefined values that you can change on your own.
+To deploy this application, install the packages first for the api with `npm run install` and then for the client, `npm --prefix ./client run install` which install packages for the client, pointing to the `client/` directory (client is assumed to be in the directory). To build the api and the client you follow similar steps with `npm run build` to build the api and `npm --prefix ./client run build` to build the client. Run `npm run start:prod` to run the application in production, this serves the client from `client/dist/` and runs the api from `dist/`. Directory includes `.env` file template with predefined values that you can change on your own.
 
 Note for windows users: you might have to use `npm run --prefix <directory> --cwd <your path> <command>`
 
@@ -74,9 +74,11 @@ The application can be deployed in docker by using `$ docker-compose up` and des
 
 `res/` directory also has shell scripts for deploying and cleaning up the docker deployment, use this with precaution. `startup.sh` runs `docker-compose up -d` and runs a couple of  tests for the containers.
 
-### Note on data.sql
+### Note on table mapping with models and data.sql
 
-In the res/ directory, data.sql contains both insertation.sql and schema.sql contents. This file can be used for deploying the application.
+In the res/ directory, data.sql contains both insertation.sql and schema.sql contents. This file can be used for deploying the application. Although TypeORM can generate tables at runtime, I've opted to utilize an existing schema definitions.  
+
+[migrations in TypeORM](https://typeorm.io/migrations)
 
 **NOTE: This does not go over sequences and views! Those can also be modified with 'reassigned owned' as long as you're using +v8.2**.
 
